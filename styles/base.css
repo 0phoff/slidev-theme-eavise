@@ -1,0 +1,100 @@
+:root {
+  font-size: 16px;
+}
+
+.slidev-layout {
+  @apply h-full;
+  font-size: 2em;
+  line-height: 1.4;
+  color: var(--slidev-theme-text, black);
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+    text-transform: lowercase;
+    font-variant: small-caps;
+    line-height: 1;
+  }
+
+  h1 {
+    font-size: 3.5em;
+  }
+
+  h2 {
+    font-size: 3em;
+  }
+
+  h3 {
+    font-size: 2.5em;
+  }
+
+  h4 {
+    font-size: 2em;
+  }
+
+  h5 {
+    font-size: 1.5em;
+  }
+
+  h6 {
+    font-size: 1.25em;    
+    font-weight: 500;
+  }
+
+  h6:not(.opacity-100) {
+    @apply opacity-40;
+  }
+
+  p, ul, ol, table, blockquote {
+    @apply mt-4;
+  }
+
+  blockquote {
+    @apply text-sm px-2 py-1 bg-$prism-background text-$prism-foreground border-$slidev-theme-primary border-l rounded;
+  }
+
+  blockquote > * {
+    @apply my-0;
+  }
+
+  table {
+    @apply w-full;
+  }
+
+  tr {
+    @apply border-b border-gray-400 border-opacity-20;
+  }
+
+  th {
+    @apply text-left font-400;
+  }
+
+  a {
+    @apply border-current border-b border-dashed hover:text-$slidev-theme-primary hover:border-solid;
+  }
+
+  td, th {
+    @apply p-2 py-3;
+  }
+
+  b, strong {
+    @apply font-600;
+  }
+
+  ul {
+    list-style: square inside;
+    text-align: left;
+  }
+
+  ol {
+    list-style: decimal inside;
+    text-align: right;
+  }
+
+  li {
+    @apply leading-1.8em;
+
+    &::marker {
+      color: var(--slidev-theme-bullet, var(--slidev-theme-primary));
+    }
+  }
+  }

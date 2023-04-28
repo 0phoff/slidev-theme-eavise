@@ -1,0 +1,30 @@
+:root {
+    --kul-blue-400: #52BDEC;
+    --kul-blue-500: #1FABD5;
+    --kul-blue-600: #1D8DB0;
+    --kul-blue-700: #116E8A;
+    --kul-blue-800: #00407A;
+    --kul-orange-400: #DD8A2E;
+    
+    --sns-sat-0: #4C72B0;
+    --sns-sat-1: #DD8452;
+    --sns-sat-2: #55A868;
+    --sns-sat-3: #C44E52;
+    --sns-sat-4: #8172B3;
+    --sns-sat-5: #937860;
+    --sns-sat-6: #DA8BC3;
+    --sns-sat-7: #8C8C8C;
+    --sns-sat-8: #CCB974;
+    --sns-sat-9: #64B5CD;
+
+    --sns-desat-0: #5975A4;
+    --sns-desat-1: #CC8963;
+    --sns-desat-2: #5F9E6E;
+    --sns-desat-3: #B55D60;
+    --sns-desat-4: #857AAB;
+    --sns-desat-5: #8D7866;
+    --sns-desat-6: #D095BF;
+    --sns-desat-7: #8C8C8C;
+    --sns-desat-8: #C1B37F;
+    --sns-desat-9: #71AEC0;
+}
