@@ -22,7 +22,8 @@
     "prism-theme-vars": "^0.2.4"
   },
   "devDependencies": {
-    "@slidev/cli": "^0.40.14"
+    "@slidev/cli": "^0.40.14",
+    "playwright-chromium": "^1.33.0"
   },
   "slidev": {
     "colorSchema": "light",
