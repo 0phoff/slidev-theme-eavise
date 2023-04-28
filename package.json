@@ -1,0 +1,46 @@
+{
+  "name": "slidev-theme-eavise",
+  "version": "0.0.0",
+  "keywords": [
+    "slidev-theme",
+    "slidev"
+  ],
+  "engines": {
+    "node": ">=14.0.0",
+    "slidev": ">=0.19.3"
+  },
+  "scripts": {
+    "dev": "slidev example.md",
+    "build": "slidev build example.md",
+    "export": "slidev export example.md",
+    "screenshot": "slidev export example.md --format png"
+  },
+  "dependencies": {
+    "@slidev/types": "^0.40.14",
+    "@unocss/reset": "^0.51.8",
+    "codemirror-theme-vars": "^0.1.2",
+    "prism-theme-vars": "^0.2.4"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^0.40.14"
+  },
+  "slidev": {
+    "colorSchema": "light",
+    "highlighter": "prism",
+    "defaults": {
+      "css": "unocss",
+      "canvasWidth": 1280,
+      "fonts": {
+        "sans": "Roboto",
+        "serif": "Electrolize",
+        "mono": "Fira Code",
+        "italic": true,
+        "weights": "100,200,400,600,700"
+      },
+      "themeConfig": {
+        "primary": "var(--kul-blue-800)",
+        "secondary": "var(--kul-blue-400)"
+      }
+    }
+  }
+}
