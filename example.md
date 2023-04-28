@@ -20,6 +20,10 @@ We can control the color of the slide, by setting the `color` option.
 If you want a smaller header banner, you can use different `<h# />` tags.  
 Alternatively, if you do not want a banner, you can either omit a slide title or place everything under the `::content::` slot.
 
+- alpha
+- beta
+- charlie
+
 ---
 color: var(--kul-blue-400)
 ---
@@ -29,17 +33,21 @@ color: var(--kul-blue-400)
 ::content::
 
 We use the `::content::` slot of the default layout  
-so that we can center the content entirely in the white area of the slide.
-
-- alpha
-- beta
-- charlie
+so that we can place our slide content entirely in the white area of the slide.  
+This makes it easier to style the content with eg. grid or flexbox.
 
 Did you notice we changed the color of the slide and the size of the header ?
 
+#### Components
+<div class="flex-(~ row justify-around) w-full mt-5">
+  <IconEavise height="50px" />
+  <LogoEavise height="50px" />
+  <LogoEaviseKUL height="50px" />
+</div>
+
 <style>
   :deep(.slot-content) {
-    @apply flex flex-col flex-items-center flex-justify-center text-center;
+    @apply flex-(~ col items-center justify-center) text-center -mt-14;
   }
 </style>
 

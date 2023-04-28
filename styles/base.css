@@ -48,6 +48,10 @@
     @apply mt-4;
   }
 
+  :where(p, ul, ol, table, blockquote) + :where(h1, h2, h3, h4, h5, h6) {
+    @apply mt-8;
+  }
+
   blockquote {
     @apply text-sm px-2 py-1 bg-$prism-background text-$prism-foreground border-$slidev-theme-primary border-l rounded;
   }

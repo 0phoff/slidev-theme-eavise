@@ -73,9 +73,12 @@ A slide to separate sections.
 This is a simple image layout, with special positioning for the first element (if it is a `<h# />` tag).  
 This allows you to easily create an image slide with a short title.
 
+Note that if you do not pass a `number`, the slide title will be centered.
+If there is a slide number, the layout slightly changes as shown in the screenshot above.
+
 | Property      | Default                     | Description |
 |:-------------:|:---------------------------:|:------------|
-| number        | ''                          | Section number. |
+| number        | undefined                   | Section number. |
 | image         | undefined                   | Background image (can be url or local file). |
 | image-filter  | undefined                   | [CSS filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter) which is applied to the image only. |
 | color         | undefined                   | Color applied on top of the image. Note that it is applied as a CSS `background` and thus can also contain eg. gradients. |

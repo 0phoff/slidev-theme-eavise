@@ -1,6 +1,6 @@
 <script setup>
 import ImageLayout from './image.vue';
-import LogoEaviseKUL from '../components/logo-eavise-kul.vue';
+import LogoEaviseKUL from '../components/LogoEaviseKUL.vue';
 
 const props = defineProps({
     image: String,
