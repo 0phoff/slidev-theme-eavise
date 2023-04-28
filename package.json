@@ -12,8 +12,8 @@
   "scripts": {
     "dev": "slidev example.md",
     "build": "slidev build example.md",
-    "export": "slidev export example.md",
-    "screenshot": "slidev export example.md --format png"
+    "export": "slidev export example.md --per-slide",
+    "screenshot": "slidev export example.md --per-slide --format png"
   },
   "dependencies": {
     "@slidev/types": "^0.40.14",
