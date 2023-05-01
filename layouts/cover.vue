@@ -4,8 +4,10 @@ import LogoEaviseKUL from '../components/LogoEaviseKUL.vue';
 
 const props = defineProps({
     image: String,
+    imageFilter: String,
     color: {type: String, default: 'var(--slidev-theme-primary)'},
     colorOpacity: Number,
+    textColor: {type: String, default: 'white'},
 
     author: String,
     date: {
@@ -27,6 +29,7 @@ const props = defineProps({
     :imageFilter="props.imageFilter"
     :color="props.color"
     :colorOpacity="props.colorOpacity"
+    :textColor="props.textColor"
     class="cover"
     >
         <slot />

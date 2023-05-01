@@ -6,6 +6,7 @@ const props = defineProps({
     imageFilter: String,
     color: {type: String, default: 'var(--slidev-theme-primary)'},
     colorOpacity: Number,
+    textColor: {type: String, default: 'white'},
 
     number: Number,
 })
@@ -17,6 +18,7 @@ const props = defineProps({
     :imageFilter="props.imageFilter"
     :color="props.color"
     :colorOpacity="props.colorOpacity"
+    :textColor="props.textColor"
     :class="['section', number ? 'numbered-section' : '']"
     >
         <slot />

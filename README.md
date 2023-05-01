@@ -35,6 +35,7 @@ This can be used to set a title and subtitle.
 | image-filter  | undefined                   | [CSS filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter) which is applied to the image only. |
 | color         | var(--slidev-theme-primary) | Color applied on top of the image. Note that it is applied as a CSS `background` and thus can also contain eg. gradients. |
 | color-opacity | 0.75                        | Opacity of the color layer (only used if there is an image). |
+| text-color    | image ? 'white' : 'inherit' | Text color (also changes logo color). |
 
 ### default
 <img alt="default layout" src="screenshots/02.png" width="30%" />
@@ -64,6 +65,7 @@ We recommend using a `<style />` tag where you can position the content by eg. a
 | image-filter  | undefined                   | [CSS filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter) which is applied to the image only. |
 | color         | undefined                   | Color applied on top of the image. Note that it is applied as a CSS `background` and thus can also contain eg. gradients. |
 | color-opacity | 0.75                        | Opacity of the color layer (only used if there is an image). |
+| text-color    | image ? 'white' : 'inherit' | Text color (sets --text-color var, which can be used by other content as well). |
 
 ### section
 <img alt="section layout" src="screenshots/04.png" width="30%" />
@@ -83,6 +85,7 @@ If there is a slide number, the layout slightly changes as shown in the screensh
 | image-filter  | undefined                   | [CSS filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter) which is applied to the image only. |
 | color         | undefined                   | Color applied on top of the image. Note that it is applied as a CSS `background` and thus can also contain eg. gradients. |
 | color-opacity | 0.75                        | Opacity of the color layer (only used if there is an image). |
+| text-color    | image ? 'white' : 'inherit' | Text color. |
 
 
 ## Components

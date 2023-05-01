@@ -1,6 +1,9 @@
 {
   "name": "slidev-theme-eavise",
   "version": "0.0.0",
+  "description": "EAVISE Theme for Slidev",
+  "author": "0phoff",
+  "license": "MIT",
   "keywords": [
     "slidev-theme",
     "slidev"
