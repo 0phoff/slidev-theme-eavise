@@ -8,93 +8,93 @@
   line-height: 1.4;
   color: var(--slidev-theme-text, black);
 
-  h1, h2, h3, h4, h5, h6 {
+  :where(h1, h2, h3, h4, h5, h6) {
     @apply font-serif;
     text-transform: lowercase;
     font-variant: small-caps;
     line-height: 1;
   }
 
-  h1 {
+  :where(h1) {
     font-size: 3.5em;
   }
 
-  h2 {
+  :where(h2) {
     font-size: 3em;
   }
 
-  h3 {
+  :where(h3) {
     font-size: 2.5em;
   }
 
-  h4 {
+  :where(h4) {
     font-size: 2em;
   }
 
-  h5 {
+  :where(h5) {
     font-size: 1.5em;
   }
 
-  h6 {
+  :where(h6) {
     font-size: 1.25em;    
     font-weight: 500;
   }
 
-  h6:not(.opacity-100) {
+  :where(h6:not(.opacity-100)) {
     @apply opacity-40;
   }
 
-  p, ul, ol, table, blockquote {
+  & > :where(p, ul, ol, table, blockquote):not(:first-child) {
     @apply mt-4;
   }
 
-  :where(p, ul, ol, table, blockquote) + :where(h1, h2, h3, h4, h5, h6) {
+  & > :where(p, ul, ol, table, blockquote) + :where(h1, h2, h3, h4, h5, h6) {
     @apply mt-8;
   }
 
-  blockquote {
+  :where(blockquote) {
     @apply text-sm px-2 py-1 bg-$prism-background text-$prism-foreground border-$slidev-theme-primary border-l rounded;
   }
 
-  blockquote > * {
+  :where(blockquote > *) {
     @apply my-0;
   }
 
-  table {
+  :where(table) {
     @apply w-full;
   }
 
-  tr {
+  :where(tr) {
     @apply border-b border-gray-400 border-opacity-20;
   }
 
-  th {
+  :where(th) {
     @apply text-left font-400;
   }
 
-  a {
+  :where(a) {
     @apply border-current border-b border-dashed hover:text-$slidev-theme-primary hover:border-solid;
   }
 
-  td, th {
+  :where(td, th) {
     @apply p-2 py-3;
   }
 
-  b, strong {
+  :where(b, strong) {
     @apply font-600;
   }
 
-  ul {
+  :where(ul) {
     list-style: square inside;
     text-align: left;
   }
 
-  ol {
+  :where(ol) {
     list-style: decimal inside;
-    text-align: right;
+    text-align: left;
   }
 
-  li {
+  :where(li) {
     @apply leading-1.8em;
 
     &::marker {
