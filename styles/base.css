@@ -68,6 +68,10 @@
     @apply border-b border-gray-400 border-opacity-20;
   }
 
+  :where(tbody tr:last-child) {
+    @apply border-b-0;
+  }
+
   :where(th) {
     @apply text-left font-400;
   }
