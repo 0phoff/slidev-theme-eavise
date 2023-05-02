@@ -34,6 +34,7 @@
     "defaults": {
       "css": "unocss",
       "canvasWidth": 1280,
+      "favicon": "https://gitlab.com/EAVISE/branding/logo/-/raw/master/color/icon_eavise.svg",
       "fonts": {
         "sans": "Roboto",
         "serif": "Electrolize",
