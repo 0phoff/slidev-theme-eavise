@@ -85,7 +85,7 @@
   }
 
   :where(b, strong) {
-    @apply font-600;
+    @apply font-500;
   }
 
   :where(ul) {

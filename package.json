@@ -40,7 +40,7 @@
         "serif": "Electrolize",
         "mono": "Fira Code",
         "italic": true,
-        "weights": "100,200,400,600,700"
+        "weights": "100,200,400,500,600,700,900"
       },
       "themeConfig": {
         "primary": "var(--kul-blue-800)",
