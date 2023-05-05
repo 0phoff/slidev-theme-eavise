@@ -28,6 +28,7 @@
 
 
 .slidev-layout.image {
+  position: absolute;
   color: var(--text-color);
 
   &::before {
