@@ -39,6 +39,7 @@
 
     background-image: var(--image);
     filter: var(--image-filter);
+    transform: var(--image-transform);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

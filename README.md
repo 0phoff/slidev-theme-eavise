@@ -27,15 +27,16 @@ The cover slide page for starting your presentations.
 If the first two elements are `<h# />` tags, they get placed in the center of the screen.
 This can be used to set a title and subtitle.
 
-| Property      | Default                     | Description |
-|:-------------:|:---------------------------:|:------------|
-| author        | undefined                   | Author name. |
-| date          | Today's date (DD MMM YYYY)  | Date. |
-| image         | undefined                   | Background image (can be url or local file). |
-| image-filter  | undefined                   | [CSS filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter) which is applied to the image only. |
-| color         | var(--slidev-theme-primary) | Color applied on top of the image. Note that it is applied as a CSS `background` and thus can also contain eg. gradients. |
-| color-opacity | 0.75                        | Opacity of the color layer (only used if there is an image). |
-| text-color    | image ? 'white' : 'inherit' | Text color (also changes logo color). |
+| Property        | Default                     | Description |
+|:---------------:|:---------------------------:|:------------|
+| author          | undefined                   | Author name. |
+| date            | Today's date (DD MMM YYYY)  | Date. |
+| image           | undefined                   | Background image (can be url or local file). |
+| image-filter    | undefined                   | [CSS filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter) which is applied to the image only. |
+| image-transform | undefined                   | [CSS transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) which is applied to the image only. |
+| color           | var(--slidev-theme-primary) | Color applied on top of the image. Note that it is applied as a CSS `background` and thus can also contain eg. gradients. |
+| color-opacity   | 0.75                        | Opacity of the color layer (only used if there is an image). |
+| text-color      | image ? 'white' : 'inherit' | Text color (also changes logo color). |
 
 ### default
 <img alt="default layout" src="screenshots/02.png" width="30%" />
@@ -59,13 +60,14 @@ A slide with a fullscreen image.
 The content in this slide is not positioned.  
 We recommend using a `<style />` tag where you can position the content by eg. adding a grid/flexbox to your `.slidev-layout`.
 
-| Property      | Default                     | Description |
-|:-------------:|:---------------------------:|:------------|
-| image         | undefined                   | Background image (can be url or local file). |
-| image-filter  | undefined                   | [CSS filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter) which is applied to the image only. |
-| color         | undefined                   | Color applied on top of the image. Note that it is applied as a CSS `background` and thus can also contain eg. gradients. |
-| color-opacity | 0.75                        | Opacity of the color layer (only used if there is an image). |
-| text-color    | image ? 'white' : 'inherit' | Text color (sets --text-color var, which can be used by other content as well). |
+| Property        | Default                     | Description |
+|:---------------:|:---------------------------:|:------------|
+| image           | undefined                   | Background image (can be url or local file). |
+| image-filter    | undefined                   | [CSS filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter) which is applied to the image only. |
+| image-transform | undefined                   | [CSS transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) which is applied to the image only. |
+| color           | undefined                   | Color applied on top of the image. Note that it is applied as a CSS `background` and thus can also contain eg. gradients. |
+| color-opacity   | 0.75                        | Opacity of the color layer (only used if there is an image). |
+| text-color      | image ? 'white' : 'inherit' | Text color (sets --text-color var, which can be used by other content as well). |
 
 ### section
 <img alt="section layout" src="screenshots/04.png" width="30%" />
@@ -78,14 +80,15 @@ This allows you to easily create an image slide with a short title.
 Note that if you do not pass a `number`, the slide title will be centered.
 If there is a slide number, the layout slightly changes as shown in the screenshot above.
 
-| Property      | Default                     | Description |
-|:-------------:|:---------------------------:|:------------|
-| number        | undefined                   | Section number. |
-| image         | undefined                   | Background image (can be url or local file). |
-| image-filter  | undefined                   | [CSS filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter) which is applied to the image only. |
-| color         | undefined                   | Color applied on top of the image. Note that it is applied as a CSS `background` and thus can also contain eg. gradients. |
-| color-opacity | 0.75                        | Opacity of the color layer (only used if there is an image). |
-| text-color    | image ? 'white' : 'inherit' | Text color. |
+| Property        | Default                     | Description |
+|:---------------:|:---------------------------:|:------------|
+| number          | undefined                   | Section number. |
+| image           | undefined                   | Background image (can be url or local file). |
+| image-filter    | undefined                   | [CSS filter](https://developer.mozilla.org/en-US/docs/Web/CSS/filter) which is applied to the image only. |
+| image-transform | undefined                   | [CSS transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) which is applied to the image only. |
+| color           | undefined                   | Color applied on top of the image. Note that it is applied as a CSS `background` and thus can also contain eg. gradients. |
+| color-opacity   | 0.75                        | Opacity of the color layer (only used if there is an image). |
+| text-color      | image ? 'white' : 'inherit' | Text color. |
 
 
 ## Components

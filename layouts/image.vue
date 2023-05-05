@@ -5,6 +5,7 @@ import { resolveAssetUrl } from '@slidev/client/layoutHelper.ts'
 const props = defineProps({
     image: String,
     imageFilter: String,
+    imageTransform: String,
     textColor: String,
     color: String,
     colorOpacity: {
@@ -25,6 +26,9 @@ const style = computed(() => {
         vars['--image'] = `url("${resolveAssetUrl(props.image)}")`
         if (props.imageFilter) {
             vars['--image-filter'] = props.imageFilter;
+        }
+        if (props.imageTransform) {
+            vars['--image-transform'] = props.imageTransform;
         }
     }
 
