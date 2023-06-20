@@ -5,8 +5,27 @@
   "author": "0phoff",
   "license": "MIT",
   "keywords": [
+    "slidev",
     "slidev-theme",
-    "slidev"
+    "eavise",
+    "ku leuven",
+    "presentation",
+    "template"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0phoff/slidev-theme-eavise"
+  },
+  "bugs": "https://github.com/0phoff/slidev-theme-eavise/issues",
+  "files": [
+    "components/*",
+    "layouts/*",
+    "setup/*",
+    "styles/*",
+    "LICENSE",
+    "package.json",
+    "README.md",
+    ".npmrc"
   ],
   "engines": {
     "node": ">=14.0.0",
@@ -40,7 +59,7 @@
         "serif": "Electrolize",
         "mono": "Fira Code",
         "italic": true,
-        "weights": "100,200,400,500,600,700,900"
+        "weights": "100,200,300,400,500,600,700,900"
       },
       "themeConfig": {
         "primary": "var(--kul-blue-800)",
