@@ -1,21 +1,30 @@
-# slidev-theme-eavise
+<br/>
+<p align="center">
+<img alt="KU Leuven - EAVISE" src="https://gitlab.com/EAVISE/branding/logo/-/raw/master/color/kul_eavise_500.png" width="700" />
+</p>
 
-[![NPM version](https://img.shields.io/npm/v/slidev-theme-eavise?color=3AB9D4&label=)](https://www.npmjs.com/package/slidev-theme-eavise)
+<p align="center">
+A <a href="https://sli.dev">Slidev</a> theme for the <a href="https://www.eavise.be">EAVISE</a> research group.
+</p>
 
-A [Slidev](https://github.com/slidevjs/slidev) theme for the [EAVISE](https://www.eavise.be) research group.
+<p align="center">
+<a href="https://www.npmjs.com/package/slidev-theme-eavise"><img alt="NPM Version" src="https://img.shields.io/npm/v/slidev-theme-eavise?color=00407A&label="></a>
+<a href="https://0phoff.github.io/slidev-theme-eavise"><img alt="Demo" src="https://img.shields.io/badge/-demo-52BDEC"></a>
+</p>
 
 ## Install
 
-This theme has not yet been pushed to NPMJS.  
-In order to use it, you should clone this repository and point your theme configuration to this folder in your `slides.md`.
+Add the following frontmatter to your `slides.md`.  
+Start Slidev, which will then prompt you to install the theme automatically.
 
 ```yaml
 ---
-theme: /path/to/eavise-theme
+theme: eavise
 ---
 ```
 
----
+Alternatively, you can install the `slidev-theme-eavise` package manually, if you need a specific version.  
+Learn more about [how to use a theme](https://sli.dev/themes/use).
 
 ## Layouts
 
@@ -102,8 +111,6 @@ The EAVISE logo as an inline SVG.
 ### LogoEaviseKUL
 The EAVISE + KU Leuven logo as an inline SVG.
 
----
-
 ## Contributing
 
 - `pnpm install`
@@ -111,3 +118,13 @@ The EAVISE + KU Leuven logo as an inline SVG.
 - Edit the `example.md` and style to see the changes
 - `pnpm run export` to generate the preview PDF
 - `pnpm run screenshot` to generate the preview PNG
+
+## License
+
+<p align="center">
+MIT License © 2023 <a href="https://github.com/0phoff">0phoff</a>
+</p>
+
+<p align="center">
+<img alt="EAVISE" src="https://gitlab.com/EAVISE/branding/logo/-/raw/master/color/logo_eavise_tag_400.png" width="350" />
+</p>
