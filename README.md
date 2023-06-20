@@ -2,7 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/slidev-theme-eavise?color=3AB9D4&label=)](https://www.npmjs.com/package/slidev-theme-eavise)
 
-A [Slidev](https://github.com/slidevjs/slidev) theme for the [EAVISE](www.eavise.be) research group.
+A [Slidev](https://github.com/slidevjs/slidev) theme for the [EAVISE](https://www.eavise.be) research group.
 
 ## Install
 
