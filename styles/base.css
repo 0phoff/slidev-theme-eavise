@@ -1,13 +1,21 @@
+/**
+*** Base styling of the various HTML elements inside of the slides
+**/
+
 :root {
   font-size: 16px;
+  --slidev-code-font-size: 0.65em;
+  --slidev-code-line-height: 1.4em;
+}
+
+:where(.slidev-layout) {
+  color: var(--slidev-theme-text, black);
+  height: 100%;
+  font-size: 2em;
+  line-height: 1.4;
 }
 
 .slidev-layout {
-  @apply h-full;
-  font-size: 2em;
-  line-height: 1.4;
-  color: var(--slidev-theme-text, black);
-
   :where(h1, h2, h3, h4, h5, h6) {
     @apply font-serif;
     text-transform: lowercase;

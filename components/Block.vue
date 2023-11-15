@@ -7,7 +7,7 @@ const props = defineProps({
     imageFilter: String,
     imageTransform: String,
     imageOpacity: Number,
-    color: String,
+    color: { type: String, default: 'var(--slidev-theme-primary)' },
     colorOpacity: Number,
 })
 
@@ -16,13 +16,13 @@ const colorOpacity = computed(() => props.colorOpacity ? props.colorOpacity : pr
 </script>
 
 <template>
-    <div class="slidev-layout bg-image bg-overlay" :class="props.image ? 'initial:text-white' : ''">
+    <div class="initial:text-white initial:p-3" :class="{'bg-image': image, 'bg-overlay': color && color.value != 'transparent'}">
         <slot />
     </div>
 </template>
 
 <style scoped>
-.slidev-layout {
+div {
     --image: v-bind('image');
     --image-filter: v-bind('props.imageFilter');
     --image-transform: v-bind('props.imageTransform');
@@ -30,5 +30,15 @@ const colorOpacity = computed(() => props.colorOpacity ? props.colorOpacity : pr
 
     --overlay-color: v-bind('props.color');
     --overlay-opacity: v-bind('colorOpacity');
+
+    &> :deep(*:first-child) {
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    &> :deep(*:last-child) {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
 }
 </style>

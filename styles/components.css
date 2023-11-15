@@ -1,0 +1,148 @@
+/**
+***  Commonly used component styles and layout classes
+**/
+
+
+/*
+ *  BG-IMAGE
+ *  Element with a background image
+ *
+ *  Variables
+ *      --image: Image path
+ *      --image-filter: CSS filter for the image
+ *      --image-transform: CSS transform for the image
+ *      --image-opacity: Opacity of the image
+ */
+.bg-image {
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -2;
+
+        opacity: var(--image-opacity);
+        background-image: var(--image);
+        filter: var(--image-filter);
+        transform: var(--image-transform);
+    }
+}
+
+/* Overridable styles */
+:where(.bg-image) {
+    overflow: hidden;
+    isolation: isolate;
+
+    &::before {
+        inset: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+
+/*
+ *  BG-OVERLAY
+ *  Element with a (transparent) background color, which can be combined with `.bg-image`
+ *
+ *  Variables
+ *      --overlay-color: background color
+ *      --overlay-opacity: background opacity
+ */
+.bg-overlay {
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+
+        background: var(--overlay-color);
+        opacity: var(--overlay-opacity);
+    }
+}
+
+/* Overridable styles */
+:where(.bg-overlay) {
+    overflow: hidden;
+    isolation: isolate;
+
+    &::after {
+        inset: 0;
+    }
+}
+
+
+/*
+ *  CLUSTER
+ *  Element that arranges its children in a regular grid.
+ *
+ *  Variables
+ *      --column-width: Minimal width of the columns (the actual width minmaxes between this number and 1fr).
+ *      --row-height: Minimal height of the columns (the actual height minmaxes between this number and 1fr).
+ */
+ .cluster {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--column-width, 10rem), 100%), 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(min(var(--row-height, 1rem), 100%), 1fr));
+}
+
+
+/*
+ *  COLUMN
+ *  Element where each child becomes a new column.
+ *  Each column takes 1fr by default, but this can be changed by settting the `grid-column` property to span X.
+ */
+.column {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+}
+
+
+/*
+ *  PILE
+ *  Element where all the children get placed on top of each other.
+ */
+ .pile {
+    display: grid;
+    grid-template-areas: "pile";
+    place-content: center;
+
+    & > * {
+        grid-area: pile;
+    }
+}
+
+
+/*
+ *  ROW
+ *  Element where each child becomes a new row.
+ *  Each row takes 1fr by default, but this can be changed by settting the `grid-row` property to span X.
+ */
+ .row {
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr;
+}
+
+
+/*
+ *  STACK
+ *  Element where all the childs get stacked (vertically by default).
+ *  The difference between this and the column/row class is that this class uses flex instead of grid.
+ *  This means that the row-height / column-width is defined by each child (+grow/shrink) as opposed to be fixed.
+ */
+.stack {
+    display: flex;
+}
+
+ /* Overridable styles */
+:where(.stack) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
