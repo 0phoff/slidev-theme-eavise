@@ -79,7 +79,7 @@ Note that the `cover` and `section` slides are modified image slides and thus ta
 
 ---
 layout: column
-content-class: gap-8 px-8 text-1s
+content-class: gap-8 p-8 items-start text-1s
 ---
 
 # Column
@@ -94,13 +94,13 @@ Each element in the `::content::` slot will be its own column.
 By default each column takes an equal amount, but you can change individual columns by applying `col-span-X`.
 
 The CSS grid gets added to `.slot-content`, so you can further style it in your slides to match what you want.
-The default style centers the content of each column vertically and has no gap or padding.
+The default style centers the content of each column horizontally and vertically.
 
 ```html
 <style>
   :deep(.slot-content) {
-    /* Add gap between columns, horizontal padding and `align-items: start`. */
-    @apply gap-5 px-5 items-start;
+    /* Add gap between columns, padding and `align-items: start`. */
+    @apply gap-8 p-8 items-start;
   }
 </style>
 ```
@@ -109,7 +109,7 @@ The default style centers the content of each column vertically and has no gap o
 
 <style>
   p {
-    @apply my-5;
+    @apply mb-5;
   }
 </style>
 
@@ -134,13 +134,13 @@ The default style centers the content of each row horizontally and vertically wi
 ```md
 ---
 layout: row
-content-class: gap-5 px-5 items-start
+content-class: gap-2 px-8 text-center
 ---
 
 # Title
 ::content::
 
-This row layout has a gap between rows, horizontal padding and `align-items: start`.
+This row layout has a gap between rows, horizontal padding and centered text.
 ```
 
 </div>

@@ -7,7 +7,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <DefaultLayout :contentClass="`row initial:place-items-center ${contentClass}`">
+    <DefaultLayout :contentClass="`row ${contentClass}`">
         <template #default>
             <slot />
         </template>

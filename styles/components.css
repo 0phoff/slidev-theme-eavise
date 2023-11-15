@@ -90,6 +90,11 @@
     grid-template-rows: repeat(auto-fit, minmax(min(var(--row-height, 1rem), 100%), 1fr));
 }
 
+/* Overridable styles */
+:where(.cluster) {
+    place-items: center;
+}
+
 
 /*
  *  COLUMN
@@ -100,6 +105,11 @@
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
+}
+
+/* Overridable styles */
+:where(.column) {
+    place-items: center;
 }
 
 
@@ -127,6 +137,11 @@
     display: grid;
     grid-auto-flow: row;
     grid-auto-rows: 1fr;
+}
+
+/* Overridable styles */
+:where(.row) {
+    place-items: center;
 }
 
 

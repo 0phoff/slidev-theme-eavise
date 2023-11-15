@@ -9,7 +9,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <DefaultLayout :contentClass="`cluster initial:place-items-center ${contentClass}`">
+    <DefaultLayout :contentClass="`cluster ${contentClass}`">
         <template #default>
             <slot />
         </template>
