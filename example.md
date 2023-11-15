@@ -231,6 +231,8 @@ We added a border around the SVGs.
 
 ::content::
 
+<svg width="320" height="100"></svg>
+
 <v-clicks>
 
 <svg width="320" height="100">
