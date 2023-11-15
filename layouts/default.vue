@@ -39,7 +39,7 @@ const props = defineProps({
         }
 
         /* FIRST ELEMENT AFTER TITLE */
-        & > :where(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child) + * {
+        & > :where(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child) + :deep(*) {
             @apply mt-6
         }
 
