@@ -154,7 +154,7 @@ This row layout has a gap between rows, horizontal padding and `align-items: sta
 
 ---
 layout: stack
-content-class: p-10 gap-5 text-center
+content-class: p-10 mb-5 gap-5 text-center
 ---
 
 # Stack
@@ -164,12 +164,13 @@ This is another default layout variant that uses flexbox to stack all of its chi
 Compared to the `row` layout, the height of each row is variable and defined by the height of the element itself.
 
 By default it applies `align-items: center` and `justify-content: center`, but these can easily be overriden if necessary.
+You can also change the orientation of the stack by applying the `flex-row` class.
 
-<Block color='var(--kul-blue-400)' class="rounded-3" v-click>
+<Block color='var(--kul-blue-400)' class="rounded-3 text-2s h-full stack" v-click>
 
 **HINT**  
-Each of the default layout variants is also available as a CSS class, to be used on any of your elements!
-This means you can simply use the *stack* class to center content inside of a div.
+Each of the default layout variants is also available as a CSS class that can be used on any of your elements!
+This means you can simply use the *stack* class to center content inside of an element, as is done here.
 
 </Block>
 
@@ -255,7 +256,7 @@ We added a border around the SVGs.
 ---
 layout: section
 number: 2
-image: https://images.unsplash.com/photo-1544636112-21c984350985?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
+image: https://images.unsplash.com/photo-1557701197-2f99da0922dd?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 image-filter: grayscale(75%)
 color-opacity: 0.6
 ---
@@ -264,7 +265,8 @@ color-opacity: 0.6
 
 
 ---
-content-class: flex-(~ items-center justify-around) px-10 mb-14
+layout: stack
+content-class: flex-row gap-25 mb-14
 ---
 
 # Icons
