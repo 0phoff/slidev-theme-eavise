@@ -231,7 +231,8 @@ We added a border around the SVGs.
 
 ::content::
 
-<svg width="320" height="100"></svg>
+<svg width="320" height="100">
+</svg>
 
 <v-clicks>
 
@@ -251,7 +252,7 @@ We added a border around the SVGs.
 
 <style>
   p { @apply text-center mt-3 text-1s; }
-  svg { border: 1px solid var(--kul-orange-400); }
+  svg:first-child { outline: 2px solid var(--kul-orange-400); }
 </style>
 
 
