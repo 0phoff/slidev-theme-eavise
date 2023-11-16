@@ -23,8 +23,18 @@ jobs:
           node-version: 'latest'
           cache: pnpm
 
-      # Publish
-      - name: pnpm publish
+      # Publish Release Candidate
+      - name: pnpm publish release
+        if: ${{ contains(github.ref_name, "-rc") }}
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          pnpm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
+          pnpm publish --no-git-checks --tag next
+
+      # Publish Release
+      - name: pnpm publish release
+        if: ${{ ! contains(github.ref_name, "-rc") }}
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
