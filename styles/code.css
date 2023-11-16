@@ -28,30 +28,15 @@
   --prism-json-property: #698c96;
 }
 
+code {
+  @apply font-mono;
+}
+
 pre[class*='language-'] {
   @apply p-2;
 }
 
 :not(pre) > code {
-  @apply font-light p-1 rounded bg-gray bg-opacity-20;
+  @apply font-light px-1 py-[0.125rem] leading-[1.5] rounded bg-gray bg-opacity-25;
   font-size: 0.9em;
 }
-
-/* PREVIOUS INLINE CODE STYLING: non-transparent bg and added quotes with ::before and ::after
-/*
-:not(pre) > code {
-  @apply font-light py-0.5 rounded;
-  font-size: 0.9em;
-  background: var(--prism-background);
-}
-
-:not(pre) > code:before,
-:not(pre) > code:after {
-  content: '`';
-  opacity: 0.50;
-}
-
-:not(pre) > code:before {
-  margin-right: -0.08em;
-}
-*/
