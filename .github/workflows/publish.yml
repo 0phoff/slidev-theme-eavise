@@ -25,7 +25,7 @@ jobs:
 
       # Publish Release Candidate
       - name: pnpm publish release
-        if: ${{ contains(github.ref_name, "-rc") }}
+        if: ${{ contains(github.ref_name, '-rc') }}
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
@@ -34,7 +34,7 @@ jobs:
 
       # Publish Release
       - name: pnpm publish release
-        if: ${{ ! contains(github.ref_name, "-rc") }}
+        if: ${{ ! contains(github.ref_name, '-rc') }}
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
