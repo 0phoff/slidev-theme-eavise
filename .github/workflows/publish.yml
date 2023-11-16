@@ -24,7 +24,7 @@ jobs:
           cache: pnpm
 
       # Publish Release Candidate
-      - name: pnpm publish release
+      - name: pnpm publish release candidate
         if: ${{ contains(github.ref_name, '-rc') }}
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
