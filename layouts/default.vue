@@ -6,7 +6,11 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="slidev-layout" :style="props.color ? `--slidev-theme-primary: ${props.color}` : ''">
+    <div
+        class="slidev-layout"
+        :class="$slidev.configs?.style ?? 'default'"
+        :style="props.color ? `--slidev-theme-primary: ${props.color}` : ''"
+    >
         <div class="slot-default">
             <slot />
         </div>
@@ -28,24 +32,40 @@ const props = defineProps({
 </template>
 
 <style scoped>
+/* BASE STYLE */
 .slidev-layout {
     @apply flex flex-col;
 
     .slot-default {
-        /* TITLE */
-        & > :where(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child) {
-            @apply w-full py-[0.15em] text-center;
-            @apply bg-$slidev-theme-primary color-white
-        }
-
         /* FIRST ELEMENT AFTER TITLE */
-        & > :where(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child) + :deep(*) {
+        &> :where(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child)+ :deep(*) {
             @apply mt-6
         }
 
         /* ALL ELEMENTS EXCEPT FIRST TITLE */
-        & > :not(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child) {
-            @apply mx-6;
+        &> :not(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child) {
+            @apply mx-10;
+        }
+    }
+}
+
+/* DEFAULT */
+.slidev-layout.default {
+    .slot-default {
+        /* TITLE */
+        &> :where(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child) {
+            @apply w-full py-[0.15em] text-center;
+            @apply bg-$slidev-theme-primary color-white;
+        }
+    }
+}
+
+/* MINIMAL THEME */
+.slidev-layout.minimal {
+    .slot-default {
+        /* TITLE */
+        &> :where(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child) {
+            @apply mt-2 mx-6;
         }
     }
 }

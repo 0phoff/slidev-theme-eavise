@@ -1,4 +1,5 @@
 <script setup>
+import { computed } from 'vue';
 import ImageLayout from './image.vue';
 import LogoEaviseKUL from '../components/LogoEaviseKUL.vue';
 
@@ -14,12 +15,24 @@ const props = defineProps({
             return `${d} ${m} ${y}`;
         },
     },
-    color: { type: String, default: 'var(--slidev-theme-primary)' },
+    color: String,
+    logoColor: String,
 })
+
+const colorComputed = computed(() => props.color ? props.color : $slidev.configs?.style == 'minimal' ? undefined : 'var(--slidev-theme-primary)');
+const logoColorComputed = computed(() => {
+    if (props.logoColor) {
+        return props.logoColor == 'undefined' ? undefined : props.logoColor;
+    }
+    if ($slidev.configs?.style == 'minimal') {
+        return undefined;
+    }
+    return 'white';
+});
 </script>
 
 <template>
-    <ImageLayout :color="props.color" class="initial:text-white">
+    <ImageLayout :color="colorComputed" :class="$slidev.configs?.style == 'minimal' ? '' : 'initial:text-white'">
         <slot />
 
         <div class="meta">
@@ -28,7 +41,7 @@ const props = defineProps({
             {{ date }}
         </div>
 
-        <div class="logo">
+        <div class="logo" :class="logoColorComputed ? 'monochrome' : ''">
             <slot name="logo" />
             <LogoEaviseKUL />
         </div>
@@ -82,14 +95,14 @@ const props = defineProps({
         padding: 0;
         margin: 0px 0px -20px;
 
-        & > :slotted(*) {
+        &> :slotted(*) {
             min-width: 1rem;
             max-width: 60%;
             flex-grow: 0;
             flex-shrink: 12;
         }
 
-        & > *:last-child {
+        &>*:last-child {
             min-width: 25%;
             max-width: 60%;
             flex-grow: 0;
@@ -97,18 +110,20 @@ const props = defineProps({
         }
 
         /* EAVISE SVG LOGO STYLES */
-        :deep(.border),
-        :deep(.kul-bg),
-        :deep(.eavise-text) {
-            fill: var(--logo-color, white);
-        }
+        &.monochrome {
+            :deep(.border),
+            :deep(.kul-bg),
+            :deep(.eavise-text) {
+                fill: v-bind('logoColorComputed');
+            }
 
-        :deep(.kul-text) {
-            fill: none;
-        }
+            :deep(.kul-text) {
+                fill: none;
+            }
 
-        :deep(.border) {
-            opacity: 0.75;
+            :deep(.border) {
+                opacity: 0.75;
+            }
         }
     }
 }

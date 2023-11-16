@@ -1,6 +1,6 @@
 <script setup>
-import { computed } from 'vue'
-import { resolveAssetUrl } from '@slidev/client/layoutHelper.ts'
+import { computed } from 'vue';
+import { resolveAssetUrl } from '@slidev/client/layoutHelper.ts';
 
 const props = defineProps({
     image: String,

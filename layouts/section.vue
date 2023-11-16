@@ -1,14 +1,17 @@
 <script setup>
+import { computed } from 'vue';
 import ImageLayout from './image.vue';
 
 const props = defineProps({
     number: Number,
-    color: { type: String, default: 'var(--slidev-theme-primary)' },
+    color: String,
 })
+
+const colorComputed = computed(() => props.color ? props.color : $slidev.configs?.style == 'minimal' ? undefined : 'var(--slidev-theme-primary)');
 </script>
 
 <template>
-    <ImageLayout :color="props.color" class="initial:text-white" :class="number ? 'numbered-section' : ''">
+    <ImageLayout :color="colorComputed" :class="[number ? 'numbered-section' : '', $slidev.configs?.style == 'minimal' ? '' : 'initial:text-white']">
         <slot />
         <div class="number">{{ number }}</div>
     </ImageLayout>
