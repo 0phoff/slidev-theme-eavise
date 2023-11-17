@@ -86,9 +86,9 @@ const logoColorComputed = computed(() => {
     }
 
     .logo {
-        @apply flex items-center justify-end;
+        @apply flex items-center justify-end gap-3;
 
-        grid-area: 10 / 7 / span 2 / span 9;
+        grid-area: 10 / 8 / span 2 / span 8;
         place-self: end;
         width: 100%;
         height: 100%;
@@ -99,14 +99,14 @@ const logoColorComputed = computed(() => {
             min-width: 1rem;
             max-width: 60%;
             flex-grow: 0;
-            flex-shrink: 12;
+            flex-shrink: 6;
         }
 
         &>*:last-child {
             min-width: 25%;
             max-width: 60%;
             flex-grow: 0;
-            flex-shrink: 10;
+            flex-shrink: 5;
         }
 
         /* EAVISE SVG LOGO STYLES */
