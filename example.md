@@ -52,6 +52,9 @@ Did you notice we changed the color of the slide and the size of the header ?
 
 </v-click>
 
+::footer::
+You can also place content in the footer.
+
 
 ---
 layout: image
@@ -170,14 +173,14 @@ You can also change the orientation of the stack by applying the `flex-row` clas
 
 **HINT**  
 Each of the default layout variants is also available as a CSS class that can be used on any of your elements!
-This means you can simply use the *stack* class to center content inside of an element, as is done here.
+This means you can simply use the `stack` class to center content inside of an element, as is done here.
 
 </Block>
 
 
 ---
 layout: cluster
-column-width: 300px
+columns: 3
 content-class: p-15 gap-5 text-center
 ---
 
@@ -189,21 +192,21 @@ Grid places all off the children from the content slot in an automatic grid.
 </Block>
 
 <Block class="w-full h-full stack">
-If the grid is not wide enough to place all of its children, it will automatically wrap and create a row!  
+If there are more children than columns, the layout automatically creates a new row.
 </Block>
 
 <Block class='w-full h-full pile row-span-2'>
 
 <div v-click-hide>
 
-All columns have an equal width, which is defined by the `column-width` argument.  
-The width passed here is actually a minimum; if there is more space for the columns to grow, they will.
+You specify the number of `columns` through an argument.
 
 </div>
 
 <div v-after>
 
-The same goes for rows with the `row-height` argument, though it is usually not necessary to give a value, as the default works pretty well.
+The same goes for the `rows` argument, though the layout usually creates the necessary rows automatically.
+One reason to specify the number of rows, is if you want empty rows in your layout.
 
 </div>
 
@@ -211,7 +214,8 @@ The same goes for rows with the `row-height` argument, though it is usually not 
 
 <Block color="var(--kul-blue-200)" class="w-full h-full stack col-span-2">
 
-You can change the place allocated to a child with the *col-span-X* and *row-span-X* classes.
+You can change the space allocated to a child with the `col-span-X` and `row-span-X` classes.
+You can also place an element in a specific slot with the `col-start-X` and `row-start-X` classes.
 
 </Block>
 
