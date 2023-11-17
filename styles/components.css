@@ -121,11 +121,16 @@
  .pile {
     display: grid;
     grid-template-areas: "pile";
-    place-content: center;
 
     & > * {
         grid-area: pile;
     }
+}
+
+/* Overridable styles */
+:where(.pile) {
+    place-content: center;
+    place-items: center;
 }
 
 
