@@ -107,7 +107,7 @@
   }
 
   :where(li) {
-    @apply leading-1.8em;
+    @apply leading-[1.6];
 
     &::marker {
       color: var(--slidev-theme-bullet, var(--slidev-theme-primary));
