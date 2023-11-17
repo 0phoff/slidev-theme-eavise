@@ -62,8 +62,8 @@
         "weights": "100,200,300,400,500,600,700,900"
       },
       "themeConfig": {
-        "primary": "var(--kul-blue-800)",
-        "secondary": "var(--kul-blue-400)"
+        "primary": "var(--kul-blue-600)",
+        "secondary": "var(--kul-blue-200)"
       }
     }
   }

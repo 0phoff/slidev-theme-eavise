@@ -3,11 +3,11 @@
 **/
 
 :root {
-    --kul-blue-400: #52BDEC;
-    --kul-blue-500: #1FABD5;
-    --kul-blue-600: #1D8DB0;
-    --kul-blue-700: #116E8A;
-    --kul-blue-800: #00407A;
+    --kul-blue-200: #52BDEC;
+    --kul-blue-300: #1FABD5;
+    --kul-blue-400: #1D8DB0;
+    --kul-blue-500: #116E8A;
+    --kul-blue-600: #00407A;
     --kul-orange-400: #DD8A2E;
     
     --sns-sat-0: #4C72B0;

@@ -34,7 +34,7 @@ Alternatively, if you do not want a banner, you can either omit a slide title or
 
 
 ---
-color: var(--kul-blue-400)
+color: var(--kul-blue-200)
 content-class: flex-(~ col items-center justify-center) text-center gap-10 mb-14 px-5
 ---
 
@@ -166,7 +166,7 @@ Compared to the `row` layout, the height of each row is variable and defined by 
 By default it applies `align-items: center` and `justify-content: center`, but these can easily be overriden if necessary.
 You can also change the orientation of the stack by applying the `flex-row` class.
 
-<Block color='var(--kul-blue-400)' class="rounded-3 text-2s h-full stack" v-click>
+<Block color='var(--kul-blue-200)' class="rounded-3 text-2s h-full stack" v-click>
 
 **HINT**  
 Each of the default layout variants is also available as a CSS class that can be used on any of your elements!
@@ -209,7 +209,7 @@ The same goes for rows with the `row-height` argument, though it is usually not 
 
 </Block>
 
-<Block color="var(--kul-blue-400)" class="w-full h-full stack col-span-2">
+<Block color="var(--kul-blue-200)" class="w-full h-full stack col-span-2">
 
 You can change the place allocated to a child with the *col-span-X* and *row-span-X* classes.
 
@@ -237,15 +237,15 @@ We added a border around the SVGs.
 <v-clicks>
 
 <svg width="320" height="100">
-  <rect x="0" y="0" width="100" height="100" style="fill: var(--kul-blue-500)" />
+  <rect x="0" y="0" width="100" height="100" style="fill: var(--kul-blue-300)" />
 </svg>
 
 <svg width="320" height="100">
-  <rect x="110" y="0" width="100" height="100" style="fill: var(--kul-blue-600)" />
+  <rect x="110" y="0" width="100" height="100" style="fill: var(--kul-blue-400)" />
 </svg>
 
 <svg width="320" height="100">
-  <rect x="220" y="0" width="100" height="100" style="fill: var(--kul-blue-700)" />
+  <rect x="220" y="0" width="100" height="100" style="fill: var(--kul-blue-500)" />
 </svg>
 
 </v-clicks>
