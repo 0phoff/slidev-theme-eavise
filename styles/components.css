@@ -81,17 +81,18 @@
  *  Element that arranges its children in a regular grid.
  *
  *  Variables
- *      --column-width: Minimal width of the columns (the actual width minmaxes between this number and 1fr).
- *      --row-height: Minimal height of the columns (the actual height minmaxes between this number and 1fr).
+ *      --columns: Number of columns
+ *      --rows: Number of rows
  */
  .cluster {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(var(--column-width, 10rem), 100%), 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(min(var(--row-height, 1rem), 100%), 1fr));
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: repeat(var(--rows), 1fr);
 }
 
 /* Overridable styles */
 :where(.cluster) {
+    grid-auto-rows: 1fr;
     place-items: center;
 }
 

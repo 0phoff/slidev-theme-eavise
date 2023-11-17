@@ -2,8 +2,8 @@
 import DefaultLayout from './default.vue';
 
 const props = defineProps({
-    columnWidth: String,
-    rowHeight: String,
+    columns: String,
+    rows: String,
     contentClass: String,
 })
 </script>
@@ -22,7 +22,7 @@ const props = defineProps({
 
 <style scoped>
 .slidev-layout {
-    --column-width: v-bind('props.columnWidth');
-    --row-height: v-bind('props.rowHeight');
+    --columns: v-bind('props.columns');
+    --rows: v-bind('props.rows');
 }
 </style>
