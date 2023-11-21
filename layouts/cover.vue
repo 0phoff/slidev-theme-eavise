@@ -41,9 +41,9 @@ const logoColorComputed = computed(() => {
             {{ date }}
         </div>
 
-        <div class="logo" :class="logoColorComputed ? 'monochrome' : ''">
+        <div class="logo">
             <slot name="logo" />
-            <LogoEaviseKUL />
+            <LogoEaviseKUL :color="logoColorComputed" />
         </div>
     </ImageLayout>
 </template>
@@ -107,23 +107,6 @@ const logoColorComputed = computed(() => {
             max-width: 60%;
             flex-grow: 0;
             flex-shrink: 5;
-        }
-
-        /* EAVISE SVG LOGO STYLES */
-        &.monochrome {
-            :deep(.border),
-            :deep(.kul-bg),
-            :deep(.eavise-text) {
-                fill: v-bind('logoColorComputed');
-            }
-
-            :deep(.kul-text) {
-                fill: none;
-            }
-
-            :deep(.border) {
-                opacity: 0.75;
-            }
         }
     }
 }

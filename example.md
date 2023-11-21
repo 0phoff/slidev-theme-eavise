@@ -276,12 +276,35 @@ layout: stack
 content-class: flex-row gap-25 mb-14
 ---
 
-# Icons
+# Icon Eavise
 ::content::
 
-<IconEavise height="50px" />
-<LogoEavise height="50px" />
+<IconEavise height="150px" />
+<IconEavise height="150px" color="var(--kul-blue-300)" />
+
+
+---
+layout: stack
+content-class: flex-row gap-25 mb-14
+---
+
+# Logo Eavise
+::content::
+
+<LogoEavise height="100px" />
+<LogoEavise height="100px" color="var(--kul-blue-400)" />
+
+
+---
+layout: stack
+content-class: flex-row gap-25 mb-14
+---
+
+# Logo Eavise KUL
+::content::
+
 <LogoEaviseKUL height="50px" />
+<LogoEaviseKUL height="50px" color="var(--kul-blue-500)" />
 
 
 ---
