@@ -16,7 +16,7 @@ const colorOpacity = computed(() => props.colorOpacity ? props.colorOpacity : pr
 </script>
 
 <template>
-    <div class="initial:text-white initial:p-3" :class="{'bg-image': image, 'bg-overlay': color && color.value != 'transparent'}">
+    <div class="initial:text-white initial:text-center initial:p-3" :class="{'bg-image': image, 'bg-overlay': color && color.value != 'transparent'}">
         <slot />
     </div>
 </template>

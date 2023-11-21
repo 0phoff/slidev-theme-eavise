@@ -303,8 +303,8 @@ content-class: flex-row gap-25 mb-14
 # Logo Eavise KUL
 ::content::
 
-<LogoEaviseKUL height="50px" />
-<LogoEaviseKUL height="50px" color="var(--kul-blue-500)" />
+<LogoEaviseKUL height="75px" />
+<LogoEaviseKUL height="75px" color="var(--kul-blue-500)" />
 
 
 ---
@@ -319,13 +319,14 @@ content-class: gap-5 py-5
 This is a block.
 </Block>
 
-<Block color="var(--kul-orange-400)" class="rounded-4 p-5 text-center">
+<Block color="var(--kul-orange-400)" class="rounded-4 py-5 w-[90%] text-right">
 This is another block with a different color and some UnoCSS styling.
 </Block>
 
 <Block
-  class="p-10 text-center h-[300px] w-[90%] stack"
+  class="w-full py-20"
   image="https://images.unsplash.com/photo-1682686578707-140b042e8f19?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  color-opacity="0.6"
 >
 
 Similarly to the image layout, a block can have a background image and a (transparent) background overlay color.
