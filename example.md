@@ -349,5 +349,26 @@ content-class: flex-row gap-25 mb-14
 <Shape size="150px" :aspect="0.9" :horizontalClip="0.4" :verticalClip="0.2" color="var(--kul-blue-600)" />
 
 
+---
+layout: pile
+---
 
+# Shape Grid
+::content::
+
+<ShapeGrid
+  :x="5" :y="5"
+  size="125px" type="hexagon" margin="1px"
+  block--class="stack text-2s"
+  block-6--color="var(--kul-blue-200)" block-7--color="var(--kul-blue-200)" block-8--color="var(--kul-blue-200)" block-9--color="var(--kul-blue-200)"
+  block-15--color="var(--kul-blue-200)" block-16--color="var(--kul-blue-200)" block-17--color="var(--kul-blue-200)" block-18--color="var(--kul-blue-200)"
+>
+
+<template #shape-12>
+
+Custom Content
+
+</template>
+
+</ShapeGrid>
 
