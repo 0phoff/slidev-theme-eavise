@@ -32,7 +32,7 @@ const logoColorComputed = computed(() => {
 </script>
 
 <template>
-    <ImageLayout :color="colorComputed" :class="$slidev.configs?.style == 'minimal' ? '' : 'initial:text-white'">
+    <ImageLayout :color="colorComputed" class="initial:text-center" :class="$slidev.configs?.style == 'minimal' ? '' : 'initial:text-white'">
         <slot />
 
         <div class="meta">
@@ -56,8 +56,8 @@ const logoColorComputed = computed(() => {
     &> :where(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child) {
         grid-area: 1 / 1 / span 5 / span 16;
         place-self: end center;
-        text-align: center;
-        padding: 0 0.2em 0.1em;
+        width: 100%;
+        padding: 0 1.5rem;
         font-weight: 400;
         letter-spacing: 0.01em;
         text-transform: none;
@@ -69,14 +69,15 @@ const logoColorComputed = computed(() => {
 
         grid-area: 6 / 1 / span 3 / span 16;
         place-self: start center;
-        text-align: center;
-        padding: 0 1.75em;
+        width: 100%;
+        padding: 0 2rem;
         margin-top: -1rem;
         font-weight: 100;
         letter-spacing: -0.01em;
     }
 
     .meta {
+        text-align: left;
         grid-area: 10 / 2 / span 2 / span 7;
         place-self: end start;
         margin-bottom: -25px;
