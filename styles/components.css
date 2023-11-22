@@ -152,6 +152,32 @@
 
 
 /*
+ *  SHAPE
+ *  Element that has a clip-path property to draw various geometric shapes (octagon, rhombus, hexagon).
+ *
+ *  Variables
+ *      --shape-size: Size (width) of the element
+ *      --shape-aspect: Aspect ratio of the element
+ *      --shape-horizontal-clip: Horizontal clipping distance
+ *      --shape-vertical-clip: Vertical clipping distance
+ */
+.shape {
+    width: var(--shape-size);
+    aspect-ratio: var(--shape-aspect, 1);
+    clip-path: polygon(
+        var(--shape-horizontal-clip) 0,
+        calc(100% - var(--shape-horizontal-clip)) 0,
+        100% var(--shape-vertical-clip),
+        100% calc(100% - var(--shape-vertical-clip)),
+        calc(100% - var(--shape-horizontal-clip)) 100%,
+        var(--shape-horizontal-clip) 100%,
+        0 calc(100% - var(--shape-vertical-clip)),
+        0 var(--shape-vertical-clip)
+    );
+}
+
+
+/*
  *  STACK
  *  Element where all the childs get stacked (vertically by default).
  *  The difference between this and the column/row class is that this class uses flex instead of grid.
