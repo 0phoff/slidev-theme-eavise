@@ -115,7 +115,7 @@ function getFallthroughAttrs() {
         <template v-for="num in numShapes">
             <div class="shape" :class="`shape-${num}`">
                 <Block v-bind="getBlockAttrs(num)">
-                    <slot :name="`shape-${num}`" />
+                    <slot :name="`block-${num}`" />
                 </Block>
             </div>
         </template>

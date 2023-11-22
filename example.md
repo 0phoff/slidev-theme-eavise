@@ -364,7 +364,7 @@ layout: pile
   block-15--color="var(--kul-blue-200)" block-16--color="var(--kul-blue-200)" block-17--color="var(--kul-blue-200)" block-18--color="var(--kul-blue-200)"
 >
 
-<template #shape-12>
+<template #block-12>
 
 Custom Content
 
