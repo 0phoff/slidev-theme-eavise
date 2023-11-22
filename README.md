@@ -32,8 +32,6 @@ Learn more about [how to use a theme](https://sli.dev/themes/use).
 - `pnpm install`
 - `pnpm run dev` to start theme preview of `example.md`
 - Edit the `example.md` and style to see the changes
-- `pnpm run export` to generate the preview PDF
-- `pnpm run screenshot` to generate the preview PNG
 
 # License
 
