@@ -5,9 +5,9 @@ import Block from './Block.vue';
 const props = defineProps({
     size: String,
     type: String,
-    aspect: Number,
-    horizontalClip: Number,
-    verticalClip: Number,
+    aspect: { type: Number, default: 1 },
+    horizontalClip: { type: Number, default: 0 },
+    verticalClip: {type: Number, default: 0 },
 })
 
 const styles = computed(() => {
