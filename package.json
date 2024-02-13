@@ -38,20 +38,21 @@
     "screenshot": "slidev export example.md --per-slide --format png"
   },
   "dependencies": {
-    "@slidev/types": "^0.40.14",
-    "@unocss/reset": "^0.51.8",
+    "@slidev/types": "^0.47.5",
+    "@unocss/reset": "^0.58.5",
     "codemirror-theme-vars": "^0.1.2",
     "prism-theme-vars": "^0.2.4"
   },
   "devDependencies": {
-    "@slidev/cli": "^0.40.14",
-    "playwright-chromium": "^1.33.0"
+    "@slidev/cli": "^0.47.5",
+    "playwright-chromium": "^1.41.2"
   },
   "slidev": {
     "colorSchema": "light",
     "highlighter": "prism",
     "defaults": {
       "css": "unocss",
+      "highlighter": "prism",
       "canvasWidth": 1280,
       "favicon": "https://gitlab.com/EAVISE/branding/logo/-/raw/master/color/icon_eavise.svg",
       "fonts": {
