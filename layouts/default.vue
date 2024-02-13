@@ -44,12 +44,12 @@ const props = defineProps({
 
     .slot-default {
         /* FIRST ELEMENT AFTER TITLE */
-        &> :where(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child)+ :deep(*) {
+        &> :deep(:where(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child))+ :deep(*) {
             @apply mt-6
         }
 
         /* ALL ELEMENTS EXCEPT FIRST TITLE */
-        &> :not(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child) {
+        &> :deep(:not(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child)) {
             @apply mx-10;
         }
     }
@@ -59,7 +59,7 @@ const props = defineProps({
 .slidev-layout.default {
     .slot-default {
         /* TITLE */
-        &> :where(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child) {
+        &> :deep(:where(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child)) {
             @apply w-full py-[0.15em] text-center;
             @apply bg-$slidev-theme-primary color-white;
         }
@@ -70,7 +70,7 @@ const props = defineProps({
 .slidev-layout.minimal {
     .slot-default {
         /* TITLE */
-        &> :where(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child) {
+        &> :deep(:where(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child)) {
             @apply mt-2 mx-6;
         }
     }

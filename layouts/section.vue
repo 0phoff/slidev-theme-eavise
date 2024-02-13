@@ -22,12 +22,12 @@ const colorComputed = computed(() => props.color ? props.color : $slidev.configs
     @apply grid grid-cols-16 grid-rows-12 grid-gap-[20px];
     font-size: 1.75em;
 
-    &.numbered-section > :where(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child) {
+    &.numbered-section > :deep(:where(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child)) {
         grid-area: 1 / 5 / span 10 / span 11;
         place-self: end left;
     }
 
-    & > :where(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child) {
+    &> :deep(:where(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child)) {
         grid-area: 1 / 1 / span 6 / span 16;
         place-self: end center;
         text-align: center;

@@ -53,7 +53,7 @@ const logoColorComputed = computed(() => {
     @apply grid grid-cols-16 grid-rows-12 gap-[20px];
     font-size: 1.75em;
 
-    &> :where(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child) {
+    &> :deep(:where(h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child)) {
         grid-area: 1 / 1 / span 5 / span 16;
         place-self: end center;
         width: 100%;
@@ -64,7 +64,7 @@ const logoColorComputed = computed(() => {
         font-variant: none;
     }
 
-    &> :where(h1:nth-child(2), h2:nth-child(2), h3:nth-child(2), h4:nth-child(2), h5:nth-child(2), h6:nth-child(2)) {
+    &> :deep(:where(h1:nth-child(2), h2:nth-child(2), h3:nth-child(2), h4:nth-child(2), h5:nth-child(2), h6:nth-child(2))) {
         @apply font-sans;
 
         grid-area: 6 / 1 / span 3 / span 16;
