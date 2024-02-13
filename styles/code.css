@@ -37,6 +37,6 @@ pre[class*='language-'] {
 }
 
 :not(pre) > code {
-  @apply font-light px-1 py-[0.125rem] leading-[1.5] rounded bg-gray bg-opacity-25;
+  @apply font-light !px-1 !py-0 !leading-[1.5] rounded !bg-gray !bg-opacity-25;
   font-size: 0.9em;
 }
