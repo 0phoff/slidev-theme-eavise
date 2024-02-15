@@ -70,7 +70,7 @@ const logoColorComputed = computed(() => {
         grid-area: 6 / 1 / span 3 / span 16;
         place-self: start center;
         width: 100%;
-        padding: 0 2rem;
+        padding: 0 1.5rem;
         margin-top: -1rem;
         font-weight: 100;
         letter-spacing: -0.01em;
